@@ -1,2 +1,4 @@
 # pyng
-A ping implementation in Python (largely for demonstration purposes)
+A cross-platform ping implementation in Python (largely for demonstration purposes)
+
+Video of active development available at https://bhax.net
