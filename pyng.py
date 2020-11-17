@@ -15,6 +15,7 @@ def ping(host):
     # TODO: Support multiple iterations
     # Building the command. Ex: "ping -c 1 google.com"
     # TODO: Support returning the output as a Tuple
+    # TODO: Support operation like Trace Route with TTLs iterated
     status,output = subprocess.getstatusoutput(f"ping {param} 1 {host}")
     if "unreachable" in output.lower():
         return False
