@@ -8,6 +8,8 @@ def ping(host):
 
     Source: https://stackoverflow.com/questions/2953462/pinging-servers-in-python
     """
+    # TODO: Support TCP Pings
+    # Source: https://github.com/zhengxiaowai/tcping
     # Option for the number of packets as a function of
     # TODO: Expand this out to a more legible set of lines
     param = '-n' if platform.system().lower()=='windows' else '-c'
@@ -16,6 +18,7 @@ def ping(host):
     # Building the command. Ex: "ping -c 1 google.com"
     # TODO: Support returning the output as a Tuple
     # TODO: Support operation like Trace Route with TTLs iterated
+    # Source: https://superuser.com/questions/915657/how-to-simulate-traceroute-using-ping
     status,output = subprocess.getstatusoutput(f"ping {param} 1 {host}")
     if "unreachable" in output.lower():
         return False
