@@ -9,9 +9,12 @@ def ping(host):
     Source: https://stackoverflow.com/questions/2953462/pinging-servers-in-python
     """
     # Option for the number of packets as a function of
+    # TODO: Expand this out to a more legible set of lines
     param = '-n' if platform.system().lower()=='windows' else '-c'
 
+    # TODO: Support multiple iterations
     # Building the command. Ex: "ping -c 1 google.com"
+    # TODO: Support returning the output as a Tuple
     status,output = subprocess.getstatusoutput(f"ping {param} 1 {host}")
     if "unreachable" in output.lower():
         return False
